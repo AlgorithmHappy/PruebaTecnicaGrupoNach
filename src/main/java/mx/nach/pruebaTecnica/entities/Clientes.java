@@ -39,7 +39,7 @@ public class Clientes {
     /*
      * Correo electronico del cliente.
      */
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 50, unique = true)
     private String email;
 
     /*

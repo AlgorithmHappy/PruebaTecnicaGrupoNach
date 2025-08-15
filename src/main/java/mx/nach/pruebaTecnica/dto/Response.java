@@ -1,5 +1,12 @@
 package mx.nach.pruebaTecnica.dto;
 
-public record Response() {
+/*
+ * Response que recivirán los clientes de la API.
+ */
+public record Response(
+    Object data,
+    String message,
+    boolean success
+) {
 
 }
