@@ -1,0 +1,11 @@
+swagger: "2.2.0"
+info:
+  version: "1.0.0"
+  title: "API de Clientes"
+paths:
+  /clientes:
+    get:
+      summary: "Listar clientes"
+      responses:
+        200:
+          description: "Lista de clientes"

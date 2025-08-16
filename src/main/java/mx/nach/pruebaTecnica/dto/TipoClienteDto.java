@@ -35,10 +35,10 @@ public enum TipoClienteDto {
     }
 
     /*
-     * Convierte un código a su correspondiente TipoClienteDto.
-     * @param id El código del tipo de cliente.
-     * @return El TipoClienteDto correspondiente al código.
-     * @throws IllegalArgumentException Si el código no es válido.
+     * Convierte un Id a su correspondiente TipoClienteDto.
+     * @param id El Id del tipo de cliente.
+     * @return El TipoClienteDto correspondiente al Id.
+     * @throws IllegalArgumentException Si el Id no es válido.
      */
     public static TipoClienteDto fromCodigo(int id) {
         for (TipoClienteDto t : TipoClienteDto.values() ) {
@@ -46,6 +46,6 @@ public enum TipoClienteDto {
                 return t;
             }
         }
-        throw new IllegalArgumentException("Código inválido: " + id);
+        throw new IllegalArgumentException("Id inválido: " + id);
     }
 }

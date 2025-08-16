@@ -75,11 +75,11 @@ public record ClienteVipDto (
      */
     public Persona requestToDto(Request request, MessageSource messageSource) {
         if(!request.getTipoCliente().equals(TipoClienteDto.VIP.name() ) ) {
-            String errorMessage = messageSource.getMessage(Constants.ERROR_CAST_REQUEST_TO_DTO, new Object[]{TipoClienteDto.REGULAR.name()}, null);
+            String errorMessage = messageSource.getMessage(Constants.ERROR_CAST_REQUEST_TO_DTO, new Object[]{TipoClienteDto.VIP.name()}, null);
             throw new IllegalArgumentException(errorMessage);
         }
 
-        return new ClienteRegularDto(request.getNombre(), request.getEmail(), request.getEdad(), TipoClienteDto.REGULAR);
+        return new ClienteVipDto(request.getNombre(), request.getEmail(), request.getEdad(), TipoClienteDto.VIP);
     }
 }
 
